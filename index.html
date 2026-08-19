@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pritam Banerjee | Molecular Ecology & eDNA</title>
+
+    <meta name="description"
+          content="Pritam Banerjee, PhD — Postdoctoral Researcher working on environmental DNA, molecular ecology, biodiversity and conservation.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+            color: #24312b;
+            background: #fafbf9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(250, 251, 249, 0.96);
+            border-bottom: 1px solid #e2e8e3;
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #173f32;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #43524b;
+            font-size: 15px;
+        }
+
+        .nav-links a:hover {
+            color: #286b50;
+        }
+
+        /* Hero */
+
+        .hero {
+            max-width: 1150px;
+            margin: auto;
+            padding: 100px 25px 90px;
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 58px;
+            line-height: 1.08;
+            color: #173f32;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            font-weight: 500;
+            color: #4e6258;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            color: #53615b;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 12px 22px;
+            border-radius: 6px;
+            background: #286b50;
+            color: white;
+            font-weight: 600;
+        }
+
+        .button.secondary {
+            background: transparent;
+            border: 1px solid #286b50;
+            color: #286b50;
+        }
+
+        .hero-photo {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            border-radius: 18px;
+            background: #e6ece8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #708078;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 85px 25px;
+        }
+
+        .section-container {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 38px;
+            color: #173f32;
+            margin-bottom: 15px;
+        }
+
+        .section-intro {
+            max-width: 800px;
+            color: #59675f;
+            font-size: 17px;
+            margin-bottom: 45px;
+        }
+
+        /* Research */
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .research-card {
+            background: white;
+            padding: 30px;
+            border: 1px solid #e1e7e2;
+            border-radius: 12px;
+        }
+
+        .research-card .icon {
+            font-size: 32px;
+            margin-bottom: 18px;
+        }
+
+        .research-card h3 {
+            color: #173f32;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
+
+        .research-card p {
+            color: #647169;
+            font-size: 15px;
+        }
+
+        /* Projects */
+
+        .projects {
+            background: #f0f4f1;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #e0e6e1;
+        }
+
+        .project-image {
+            height: 210px;
+            background: #dfe8e2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #65766c;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            color: #173f32;
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: #647169;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            color: #286b50;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* Publications */
+
+        .publication {
+            padding: 22px 0;
+            border-bottom: 1px solid #dfe5e1;
+        }
+
+        .publication h3 {
+            color: #173f32;
+            font-size: 18px;
+            margin-bottom: 7px;
+        }
+
+        .publication p {
+            color: #647169;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #173f32;
+            color: white;
+            padding: 45px 25px;
+        }
+
+        .footer-container {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #dce9e1;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 850px) {
+
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding-top: 60px;
+            }
+
+            .hero h1 {
+                font-size: 44px;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<nav>
+    <div class="nav-container">
+
+        <div class="logo">
+            Pritam Banerjee
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- Hero -->
+
+<header class="hero">
+
+    <div>
+
+        <h1>Pritam Banerjee, PhD</h1>
+
+        <h2>
+            Postdoctoral Researcher · Molecular Ecology · Environmental DNA
+        </h2>
+
+        <p>
+            I develop molecular approaches to understand biodiversity,
+            species interactions, and biological invasions, with a particular
+            focus on environmental DNA (eDNA), DNA metabarcoding, and
+            biodiversity monitoring.
+        </p>
+
+        <div class="buttons">
+
+            <a class="button" href="#research">
+                Explore my research
+            </a>
+
+            <a class="button secondary" href="#projects">
+                View projects
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-photo">
+
+        <div>
+            <strong>Your photograph will go here</strong>
+            <br><br>
+            We will replace this with your field/research photograph.
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- Research -->
+
+<section id="research">
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            Research
+        </h2>
+
+        <p class="section-intro">
+            My research combines environmental DNA, molecular ecology,
+            biodiversity science and ecological approaches to develop
+            innovative tools for understanding and monitoring biodiversity.
+        </p>
+
+
+        <div class="research-grid">
+
+            <div class="research-card">
+
+                <div class="icon">🧬</div>
+
+                <h3>Environmental DNA</h3>
+
+                <p>
+                    Developing eDNA and DNA metabarcoding approaches
+                    for biodiversity detection and monitoring.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <div class="icon">🌿</div>
+
+                <h3>Biodiversity</h3>
+
+                <p>
+                    Understanding biodiversity patterns and improving
+                    ecological monitoring across ecosystems.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <div class="icon">🐌</div>
+
+                <h3>Invasive Species</h3>
+
+                <p>
+                    Developing molecular approaches for invasive species
+                    detection, monitoring and biosecurity.
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <div class="icon">🕸️</div>
+
+                <h3>Species Interactions</h3>
+
+                <p>
+                    Using molecular approaches to uncover ecological
+                    interactions that are difficult to observe directly.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Projects -->
+
+<section id="projects" class="projects">
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            Featured Projects
+        </h2>
+
+        <p class="section-intro">
+            Selected research projects exploring biodiversity,
+            environmental DNA, invasive species and ecological interactions.
+        </p>
+
+
+        <div class="project-grid">
+
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    Project photograph
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+                        Pacific Island Biosecurity
+                    </h3>
+
+                    <p>
+                        Developing next-generation molecular approaches
+                        for monitoring invasive arthropod species across
+                        Pacific island ecosystems.
+                    </p>
+
+                    <a class="project-link" href="#">
+                        Read project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    Spider-web photograph
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+                        Spider-Web eDNA
+                    </h3>
+
+                    <p>
+                        Investigating whether spider webs can act as
+                        natural samplers of environmental DNA and
+                        terrestrial biodiversity.
+                    </p>
+
+                    <a class="project-link" href="#">
+                        Read project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    Fruit / field photograph
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+                        Fruit eDNA & Frugivory
+                    </h3>
+
+                    <p>
+                        Using environmental DNA collected from fruits
+                        to investigate plant–frugivore interactions.
+                    </p>
+
+                    <a class="project-link" href="#">
+                        Read project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    Apple snail photograph
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+                        Pomacea & Invasion Ecology
+                    </h3>
+
+                    <p>
+                        Molecular ecology, environmental DNA and
+                        invasion biology of invasive apple snails.
+                    </p>
+
+                    <a class="project-link" href="#">
+                        Read project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    Rice-field photograph
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+                        Rice-Field eDNA
+                    </h3>
+
+                    <p>
+                        Applying environmental DNA approaches to
+                        biodiversity and environmental monitoring
+                        in agricultural systems.
+                    </p>
+
+                    <a class="project-link" href="#">
+                        Read project →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    Research photograph
+                </div>
+
+                <div class="project-content">
+
+                    <h3>
+                        Molecular Biodiversity Monitoring
+                    </h3>
+
+                    <p>
+                        Developing molecular and bioinformatic tools
+                        for efficient biodiversity assessment.
+                    </p>
+
+                    <a class="project-link" href="#">
+                        Read project →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Publications -->
+
+<section id="publications">
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            Selected Publications
+        </h2>
+
+        <p class="section-intro">
+            A selection of my research publications. A complete list
+            is available through my Google Scholar profile.
+        </p>
+
+
+        <div class="publication">
+
+            <h3>
+                Banerjee, P. et al. — Environmental DNA and biodiversity monitoring
+            </h3>
+
+            <p>
+                Molecular ecology and environmental DNA research.
+            </p>
+
+        </div>
+
+
+        <div class="publication">
+
+            <h3>
+                Banerjee, P. et al. — DNA-based approaches for ecological monitoring
+            </h3>
+
+            <p>
+                Applications of DNA metabarcoding for biodiversity assessment.
+            </p>
+
+        </div>
+
+
+        <div class="publication">
+
+            <h3>
+                Banerjee, P. et al. — Environmental DNA and frugivorous interactions
+            </h3>
+
+            <p>
+                Using eDNA from fruits to investigate plant–animal interactions.
+            </p>
+
+        </div>
+
+
+        <br>
+
+        <a class="button"
+           href="https://scholar.google.com/citations?user=DfM6UvsAAAAJ&hl=en"
+           target="_blank">
+
+            View Google Scholar
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- About -->
+
+<section id="about">
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <p class="section-intro">
+
+            I am a molecular ecologist working at the intersection of
+            biodiversity science, environmental DNA, molecular biology
+            and conservation. My research focuses on developing and
+            applying DNA-based approaches to understand biodiversity,
+            species distributions and ecological interactions.
+
+            <br><br>
+
+            I am currently a Postdoctoral Researcher at the
+            University of California, Berkeley, where I work on
+            next-generation approaches for biodiversity and biosecurity
+            monitoring.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- Contact -->
+
+<section id="contact">
+
+    <div class="section-container">
+
+        <h2 class="section-title">
+            Connect
+        </h2>
+
+        <p class="section-intro">
+            I am interested in collaborations involving environmental DNA,
+            molecular ecology, biodiversity monitoring and conservation.
+        </p>
+
+        <div class="buttons">
+
+            <a class="button"
+               href="https://scholar.google.com/citations?user=DfM6UvsAAAAJ&hl=en"
+               target="_blank">
+                Google Scholar
+            </a>
+
+            <a class="button secondary"
+               href="https://github.com/Pritam8683"
+               target="_blank">
+                GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer>
+
+    <div class="footer-container">
+
+        <div>
+            <strong>Pritam Banerjee, PhD</strong>
+            <br>
+            Molecular Ecology · Environmental DNA · Biodiversity
+        </div>
+
+        <div class="footer-links">
+
+            <a href="https://github.com/Pritam8683" target="_blank">
+                GitHub
+            </a>
+
+            <a href="https://scholar.google.com/citations?user=DfM6UvsAAAAJ&hl=en"
+               target="_blank">
+                Google Scholar
+            </a>
+
+            <a href="https://orcid.org/" target="_blank">
+                ORCID
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
